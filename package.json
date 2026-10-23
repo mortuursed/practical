@@ -1,0 +1,30 @@
+{
+  "name": "practical",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html  --public-url /practical/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortuursed/practical.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mortuursed/practical/issues"
+  },
+  "homepage": "https://github.com/mortuursed/practical#readme",
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "parcel": "^2.16.4"
+  }
+}

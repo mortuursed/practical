@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Алексей Иванов",
+    "email": "alexey.ivanov@example.com",
+    "age": 28,
+    "isActive": true,
+    "roles": ["admin", "user"]
+  },
+  {
+    "id": 2,
+    "name": "Елена Смирнова",
+    "email": "elena.smirnova@example.com",
+    "age": 34,
+    "isActive": false,
+    "roles": ["user"]
+  },
+  {
+    "id": 3,
+    "name": "Дмитрий Петров",
+    "email": "dmitry.petrov@example.com",
+    "age": 22,
+    "isActive": true,
+    "roles": ["moderator", "user"]
+  }
+]
