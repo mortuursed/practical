@@ -714,7 +714,75 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"2R06K":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _dataJson = require("../data.json");
+var _dataJsonDefault = parcelHelpers.interopDefault(_dataJson);
+var _render = require("./markApp/render");
+var _renderDefault = parcelHelpers.interopDefault(_render);
+const getList = document.querySelector(".list");
+(0, _renderDefault.default)((0, _dataJsonDefault.default));
+// getList.insertAdjacentHTML("beforeend", render(users))
+getList.innerHTML = (0, _renderDefault.default)((0, _dataJsonDefault.default));
 
-},{}]},["7wZbQ","2R06K"], "2R06K", "parcelRequirebb17", {})
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../data.json":"4UYPk","./markApp/render":"arp1A"}],"jnFvT":[function(require,module,exports,__globalThis) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"4UYPk":[function(require,module,exports,__globalThis) {
+module.exports = JSON.parse('[{"id":1,"name":"\u0410\u043B\u0435\u043A\u0441\u0435\u0439 \u0418\u0432\u0430\u043D\u043E\u0432","email":"alexey.ivanov@example.com","age":28,"isActive":true,"roles":["admin","user"]},{"id":2,"name":"\u0415\u043B\u0435\u043D\u0430 \u0421\u043C\u0438\u0440\u043D\u043E\u0432\u0430","email":"elena.smirnova@example.com","age":34,"isActive":false,"roles":["user"]},{"id":3,"name":"\u0414\u043C\u0438\u0442\u0440\u0438\u0439 \u041F\u0435\u0442\u0440\u043E\u0432","email":"dmitry.petrov@example.com","age":22,"isActive":true,"roles":["moderator","user"]}]');
+
+},{}],"arp1A":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function render(ar) {
+    const data = ar.map(({ id, name, email, age, isActive, roles })=>{
+        return `
+    <li id="${id}">
+            <p>${name}</p>
+            <p>${email}</p>
+            <p>${age}</p>
+            <p>${isActive ? "online" : "offline"}</p>
+            <ul>
+            ${roles.map((item)=>{
+            return `
+                <li> 
+                ${item}
+                </li>`;
+        })}
+            </ul>
+        </li>
+`;
+    }).join("");
+    return data;
+}
+exports.default = render;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["7wZbQ","2R06K"], "2R06K", "parcelRequirebb17", {})
 
 //# sourceMappingURL=practical.0f77c784.js.map
