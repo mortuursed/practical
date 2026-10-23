@@ -1,0 +1,1 @@
+{"mappings":"ACAA","sources":["practical.af7ae095.css","src/style.css"],"sourcesContent":["h1 {\n  color: #00f;\n  width: 100px;\n  height: 100px;\n}\n/*# sourceMappingURL=practical.af7ae095.css.map */\n","h1{\r\n    color: blue;\r\n    width: 100px;\r\n    height: 100px;\r\n}"],"names":[],"version":3,"file":"practical.af7ae095.css.map"}
